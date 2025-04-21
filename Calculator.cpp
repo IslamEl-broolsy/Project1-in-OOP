@@ -60,18 +60,9 @@ public:
 	int Divide(int DivNum)
 	{
 		_OPType = '/';
+                _DivNum = (DivNum == 0) ? 1 : DivNum;
+                return _Num /= _DivNum;
 
-		if (DivNum == 0)
-		{
-			DivNum = 1;
-			_DivNum = DivNum;
-			return _Num /= DivNum;
-		}
-		else
-		{
-			_DivNum = DivNum;
-			return _Num /= DivNum;
-		}
 	}
 
 	int Multiply(int MultNum)
